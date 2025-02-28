@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento de Laboratório</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Seu CSS personalizado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container my-5">
+    <!-- Título com imagem personalizada -->
+    <h1 class="text-center mb-4">
+      <img src="img/logo.png" alt="Agendamento" class="img-fluid" style="max-width: 100px;">Agendamento Lab
+    </h1>
+
+    <!-- Formulário de Agendamento -->
+    <form id="agendamentoForm" class="mb-4 p-4 bg-light rounded shadow-sm">
+      <div class="mb-3">
+        <label for="nome" class="form-label"><i class="fas fa-user"></i> Nome do Professor:</label>
+        <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="disciplina" class="form-label"><i class="fas fa-book"></i> Disciplina:</label>
+        <input type="text" id="disciplina" name="disciplina" class="form-control" placeholder="Digite a disciplina" required>
+      </div>
+      <div class="mb-3">
+        <label for="laboratorio" class="form-label"><i class="fas fa-flask"></i> Laboratório:</label>
+        <select id="laboratorio" name="laboratorio" class="form-select" required>
+          <option value="Lab 1">Lab 1</option>
+          <option value="Lab 2">Lab 2</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="data" class="form-label"><i class="fas fa-calendar"></i> Data:</label>
+        <input type="date" id="data" name="data" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label"><i class="fas fa-clock"></i> Horários:</label>
+        <div id="horarios" class="d-flex flex-wrap gap-2">
+          <button type="button" class="horario-btn btn btn-outline-primary" data-horario="1">Horário 1</button>
+          <button type="button" class="horario-btn btn btn-outline-primary" data-horario="2">Horário 2</button>
+          <button type="button" class="horario-btn btn btn-outline-primary" data-horario="3">Horário 3</button>
+          <button type="button" class="horario-btn btn btn-outline-primary" data-horario="4">Horário 4</button>
+          <button type="button" class="horario-btn btn btn-outline-primary" data-horario="5">Horário 5</button>
+          <button type="button" class="horario-btn btn btn-outline-primary" data-horario="6">Horário 6</button>
+          <button type="button" class="horario-btn btn btn-outline-primary" data-horario="7">Horário 7</button>
+          <button type="button" class="horario-btn btn btn-outline-primary" data-horario="8">Horário 8</button>
+          <button type="button" class="horario-btn btn btn-outline-primary" data-horario="9">Horário 9</button>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary w-100"><i class="fas fa-check"></i> Agendar</button>
+    </form>
+
+    <!-- Tabela de Agendamentos -->
+    <h2 class="text-center my-4">Agendamentos</h2>
+    <table id="agendamentosTable" class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Professor</th>
+          <th>Disciplina</th>
+          <th>Laboratório</th>
+          <th>Data</th>
+          <th>Horário</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Os agendamentos serão inseridos aqui via JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS e dependências -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <!-- Seu JavaScript personalizado -->
+  <script src="script.js"></script>
+</body>
+</html>

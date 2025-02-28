@@ -1,0 +1,23 @@
+/* Estilos personalizados */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6C63FF, #00BFA6);
+  color: #333;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.horario-btn.selecionado {
+  background-color: #28a745;
+  color: white;
+  border-color: #218838;
+}
+
+.table {
+  margin-top: 20px;
+}
